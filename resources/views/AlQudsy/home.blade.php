@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Al Qudsy</title>
+    <style></style>
 </head>
 <body>
     {{-- NavBar --}}
@@ -118,9 +119,9 @@
                 Pondok pesantren adalah sebuah institusi pendidikan Islam tradisional di Indonesia. Di pondok pesantren, santri tinggal dan belajar di bawah bimbingan ustadz (guru atau pemimpin pesantren).
               </p>
               <div class="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-zinc-900 text-white hover:bg-zinc-900/90 h-10 px-4 py-2 w-full sm:w-auto">
-                    Baca Selengkapnya
-                </button>
+                <a href="#content-2" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-zinc-900 text-white hover:bg-zinc-900/90 h-10 px-4 py-2 w-full sm:w-auto transition-all duration-300">
+                  Baca Selengkapnya
+                </a>
               </div>
             </div>
             <img src="{{ asset('images/edited01.jpg') }}" alt="placeholder hero"
@@ -130,7 +131,7 @@
       </section>
 
     {{-- Content 2 : Selengkapnya --}}
-    <section class="py-32">
+    <section class="py-32" id="content-2">
         <div class="container mx-auto">
           <div class="mx-auto mb-20 max-w-screen-md text-center">
             <h1 class="mb-6 text-4xl font-medium md:mb-11 md:text-7xl">
