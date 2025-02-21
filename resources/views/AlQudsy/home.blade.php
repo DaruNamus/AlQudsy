@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="{{ asset('css/gradient.css') }}">
+    
+    {{-- AOS CDN --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Al Qudsy</title>
     <style></style>
 </head>
@@ -110,15 +115,15 @@
       </div>
 
       {{-- Content 1 : Pondok Pesantren Al Qudsy --}}
-      <section class="py-32">
+      <section class="pb-32 pt-16 p-6 top-bg" data-aos="fade-left">
         <div class="container mx-auto">
           <div class="grid items-center gap-8 lg:grid-cols-2">
-            <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div class="flex flex-col items-center text-center lg:items-start lg:text-left" data-aos="fade-up-right">
               <h1 class="my-6 text-pretty text-3xl font-semibold lg:text-5xl">Al Qudsy</h1>
-              <p class="mb-8 max-w-xl text-zinc-600 lg:text-lg">
+              <p class="mb-8 max-w-xl text-zinc-600 lg:text-lg" data-aos="fade-up-right">
                 Pondok pesantren adalah sebuah institusi pendidikan Islam tradisional di Indonesia. Di pondok pesantren, santri tinggal dan belajar di bawah bimbingan ustadz (guru atau pemimpin pesantren).
               </p>
-              <div class="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
+              <div class="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start" data-aos="flip-left">
                 <a href="#content-2" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-zinc-900 text-white hover:bg-zinc-900/90 h-10 px-4 py-2 w-full sm:w-auto transition-all duration-300">
                   Baca Selengkapnya
                 </a>
@@ -131,9 +136,9 @@
       </section>
 
     {{-- Content 2 : Selengkapnya --}}
-    <section class="py-32" id="content-2">
+    <section class="py-32 shadow-lg radial-grey" id="content-2">
         <div class="container mx-auto">
-          <div class="mx-auto mb-20 max-w-screen-md text-center">
+          <div class="mx-auto mb-20 max-w-screen-md text-center" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <h1 class="mb-6 text-4xl font-medium md:mb-11 md:text-7xl">
               Pondok Pesantren Al Qudsy
             </h1>
@@ -141,23 +146,23 @@
                 Jln. Pangeran Puger Gg. 5, No. 54, Demaan, Kudus
             </p>
           </div>
-          <div class="mx-auto grid max-w-screen-lg gap-10 md:grid-cols-2">
-            <div class="order-1 flex h-full items-center rounded-lg bg-zinc-100">
+          <div class="mx-auto grid max-w-screen-lg gap-10 md:grid-cols-2 shadow-lg p-6 yellow-bg rounded-lg" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <div class="order-1 flex h-full items-center rounded-lg bg-zinc-100 shadow-lg">
               <img src="{{ asset('images/edited02.jpg') }}" alt="placeholder"
                 class="h-full w-full rounded-md object-cover" />
             </div>
-            <div class="order-3 flex h-full items-center rounded-lg bg-zinc-100">
+            <div class="order-3 flex h-full items-center rounded-lg bg-zinc-100 shadow-lg">
               <img src="{{ asset('images/edited03.jpg') }}" alt="placeholder"
                 class="h-full w-full rounded-md object-cover" />
             </div>
-            <div class="order-2 -mt-6 max-w-[412px] md:order-3">
+            <div class="order-2 -mt-6 max-w-[412px] md:order-3" data-aos="flip-up">
               <p class="mb-6 text-sm text-zinc-600 md:mb-12">TPQ</p>
               <h3 class="mb-3 text-2xl font-medium md:mb-6">Dekat dengan Pusat Kota</h3>
               <p class="mb-6">
                 Pondok Pesantren Al Qudsy terletak di Desa Demaan, Kabupaten Kudus, Jawa Tengah. Pesantren ini didirikan dengan tujuan utama untuk memperdalam pengetahuan dan pemahaman agama Islam bagi para santri. Di bawah bimbingan para kiai dan ustaz yang berkompeten, santri Al Qudsy mendapatkan pendidikan agama yang menyeluruh, meliputi studi Al Quran, hadis, fikih, dan tasawuf.
               </p>
             </div>
-            <div class="order-4 -mt-6 max-w-[412px] md:order-3">
+            <div class="order-4 -mt-6 max-w-[412px] md:order-3" data-aos="flip-up">
               <p class="mb-6 text-sm text-zinc-600 md:mb-12">Ruang Tamu</p>
               <h3 class="mb-3 text-2xl font-medium md:mb-6">Pengembangan Ilmu dan Akhlak</h3>
               <p class="mb-6">
@@ -170,8 +175,8 @@
 
     {{-- Content 3 : Pembelajaran --}}
 
-    <section class="py-32">
-        <div class="container mx-auto">
+    <section class="py-32 p-6 radial-green shadow-lg">
+        <div class="container mx-auto" data-aos="fade-down-left">
           <div
             class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground mb-6">
             Materi
@@ -182,8 +187,8 @@
             @foreach ($materi_pembelajaran as $materi)
             <div class="flex gap-3">
               <div>
-                <h3 class="text-lg font-medium">{{ $materi->judul }}</h3>
-                <p class="leading-7 text-zinc-600">
+                <h3 class="text-lg font-medium" data-aos="zoom-in-up">{{ $materi->judul }}</h3>
+                <p class="leading-7 text-zinc-600" data-aos="flip-down" data-aos-delay="300" data-aos="flip-down"data-aos-anchor-placement="bottom-bottom">
                     {{ $materi->deskripsi }}
                 </p>
               </div>
@@ -194,51 +199,51 @@
       </section>
 
     {{-- Content 4 : Pengajar --}}
-    <section class="py-32">
-        <div class="container flex flex-col items-center text-center mx-auto">
+    <section class="py-32 p-6 shadow-lg">
+        <div class="container flex flex-col items-center text-center mx-auto" data-aos="fade-down">
           <p class="semibold">Berkenalan dengan</p>
           <h2 class="my-6 text-pretty text-2xl font-bold lg:text-4xl">Tenaga Pendidik Kami</h2>
           <p class="mb-8 max-w-3xl text-zinc-600 lg:text-xl">
           </p>
         </div>
         <div class="container mt-16 grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-4 mx-auto">
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center" data-aos="zoom-out-down">
             <img src="{{ asset ('images/pengajar/aliimroni.jpg') }}"
               class="relative flex shrink-0 overflow-hidden rounded-full mb-4 size-20 border md:mb-5 lg:size-24" />
             <p class="text-center font-medium">Ali Imroni</p>
             <p class="text-center text-zinc-600">Role / Pendidikan</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center" data-aos="zoom-out-down">
             <img src="{{ asset ('images/pengajar/ulilalbab.jpg') }}"
               class="relative flex shrink-0 overflow-hidden rounded-full mb-4 size-20 border md:mb-5 lg:size-24" />
             <p class="text-center font-medium">Ulil Albab</p>
             <p class="text-center text-zinc-600">Role / Pendidikan</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center" data-aos="zoom-out-down">
             <img src="/images/placeholders/minima/avatar-bw-3.jpg"
               class="relative flex shrink-0 overflow-hidden rounded-full mb-4 size-20 border md:mb-5 lg:size-24" />
             <p class="text-center font-medium">Mb. Hanik</p>
             <p class="text-center text-zinc-600">Role / Pendidikan</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center" data-aos="zoom-out-down">
             <img src="{{ asset ('images/pengajar/nurafif.jpg') }}"
               class="relative flex shrink-0 overflow-hidden rounded-full mb-4 size-20 border md:mb-5 lg:size-24" />
             <p class="text-center font-medium">Nur Afif</p>
             <p class="text-center text-zinc-600">Role / Pendidikan</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center" data-aos="zoom-out-down">
             <img src="{{ asset ('images/pengajar/kohirulanam.jpg') }}"
               class="relative flex shrink-0 overflow-hidden rounded-full mb-4 size-20 border md:mb-5 lg:size-24" />
             <p class="text-center font-medium">Khoirul Anam</p>
             <p class="text-center text-zinc-600">Role / Pendidikan</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center" data-aos="zoom-out-down">
             <img src="{{ asset ('images/pengajar/kohirunamala.jpg') }}"
               class="relative flex shrink-0 overflow-hidden rounded-full mb-4 size-20 border md:mb-5 lg:size-24" />
             <p class="text-center font-medium">Khoirul Amala</p>
             <p class="text-center text-zinc-600">Role / Pendidikan</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center" data-aos="zoom-out-down">
             <img src="/images/placeholders/minima/avatar-bw-1.jpg"
               class="relative flex shrink-0 overflow-hidden rounded-full mb-4 size-20 border md:mb-5 lg:size-24" />
             <p class="text-center font-medium">Cava Billah</p>
@@ -248,7 +253,7 @@
       </section>
 
       {{-- Footer --}}
-      <section class="py-32">
+      <section class="py-8 p-6 footer">
         <div class="container mx-auto">
           <footer>
             <div class="grid grid-cols-2 gap-8 lg:grid-cols-6">
@@ -275,5 +280,11 @@
           </footer>
         </div>
       </section>
+
+    {{-- AOS JS --}}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
